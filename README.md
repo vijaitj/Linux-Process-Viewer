@@ -20,5 +20,4 @@ Clone the project repository: `git clone https://github.com/vijaitj/Linux-Proces
 Build the project: `make build`
 
 Run the resulting executable: `./build/monitor`
-![Starting System Monitor](images/starting_monitor.png)
 
