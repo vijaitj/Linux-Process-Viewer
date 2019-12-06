@@ -1,4 +1,4 @@
-# Linux-Process-Viewer
+# Linux Process Viewer
 A simple process viewer for Linux which can be used to monitor system processes. It uses the ncurses library for display purposes.
 
 ![System Monitor](images/monitor.png)
