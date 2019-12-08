@@ -67,16 +67,8 @@ enum ProcesorStates {
   kCSTime_ = 16,
   kStartTime_ = 21
 };
-  
-// Since all the information about the Jiffies (both Active and Idle) come from a single file 
-// (i.e., /proc/[PID]/stat for individual processes and /proc/stat for the Processor)
-// they have to read at once, having different functions to read them does not make sense.
 
-//long ActiveJiffies();
-//long ActiveJiffies(int pid);
-//long IdleJiffies();
-
-// So we use the two functions below to compute CPU utilization
+// Functions to compute CPU utilization
 std::pair<long,long> Jiffies();
 std::pair<long,long> Jiffies(int pid, long uptime);
 // Processes
