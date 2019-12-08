@@ -4,5 +4,5 @@
 
 int main() {
   System system;
-  NCursesDisplay::Display(system,system.Processes().size());
+  NCursesDisplay::Display(system);
 }

@@ -4,6 +4,7 @@
 #include <fstream>
 #include <regex>
 #include <string>
+#include <unordered_map>
 
 namespace LinuxParser {
 // Paths
@@ -29,8 +30,8 @@ enum MemoryCategories {
   kMemSreclaimable_
 };
 
-// Hashtable to map string memory category values to their enum types
-static std::map<std::string, MemoryCategories> mapMemCategories;
+// 
+static std::unordered_map<std::string, MemoryCategories> mapMemCategories;
 void EstablishMemStringMap();
 // Helper to clear string streams
 void ClearStringStream(std::stringstream&);
@@ -76,8 +77,8 @@ enum ProcesorStates {
 //long IdleJiffies();
 
 // So we use the two functions below to compute CPU utilization
-std::vector<long> Jiffies();
-std::vector<long> Jiffies(int pid, long uptime);
+std::pair<long,long> Jiffies();
+std::pair<long,long> Jiffies(int pid, long uptime);
 // Processes
 std::string Command(int pid);
 std::string Ram(int pid);
